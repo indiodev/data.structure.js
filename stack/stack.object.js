@@ -9,14 +9,13 @@ class Stack {
       this.items[this.count] = element;
       this.count++;
     }
-    console.log(this.items);
   }
 
   pop() {
     if (this.isEmpty()) return undefined;
-    const result = this.peek();
-    delete this.peek();
     this.count--;
+    const result = this.items[this.size()];
+    delete this.items[this.size()];
     return result;
   }
 
