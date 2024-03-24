@@ -30,12 +30,4 @@ class Stack {
   }
 }
 
-const stack = new Stack();
-
-stack.push(1, 3, 4, 5);
-
-while (!stack.isEmpty()) {
-  console.log("removendo => ", stack.pop(), ", stack => ", stack.items);
-}
-
 module.exports = { ArrayStack: Stack };
