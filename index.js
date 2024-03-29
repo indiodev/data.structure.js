@@ -1,3 +1,4 @@
+const { Queue } = require("./queue/queue");
 const { decimalBaseConversor } = require("./stack/decimal.base.conversor");
 const { decimalToBinary } = require("./stack/decimal.to.binary");
 const { ArrayStack } = require("./stack/stack.array");
@@ -32,3 +33,14 @@ console.log(
   " base 16 => ",
   decimalBaseConversor(100345, 16)
 );
+
+const queue = new Queue();
+
+queue.enqueue(1);
+queue.enqueue(5);
+queue.enqueue(3);
+queue.enqueue(2);
+
+while (!queue.isEmpty()) {
+  console.log("removed element from queue => ", queue.dequeue());
+}
