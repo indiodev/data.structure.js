@@ -1,3 +1,4 @@
+const { decimalBaseConversor } = require("./stack/decimal.base.conversor");
 const { decimalToBinary } = require("./stack/decimal.to.binary");
 const { ArrayStack } = require("./stack/stack.array");
 const { ObjectStack } = require("./stack/stack.object");
@@ -25,3 +26,9 @@ while (!array_stack.isEmpty()) {
 }
 
 console.log("decimal => ", 1000, " binary => ", decimalToBinary(1000));
+console.log(
+  "decimal => ",
+  100345,
+  " base 16 => ",
+  decimalBaseConversor(100345, 16)
+);
