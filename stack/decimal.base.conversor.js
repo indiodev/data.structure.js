@@ -14,14 +14,14 @@ function decimalBaseConversor(number, base) {
 
   while (number > 0) {
     const rest = Math.floor(number % base);
-    console.log("up rest (binary) => ", rest);
+    console.log(`up rest (${base}) => `, rest);
     stack.push(rest);
     number = Math.floor(number / base);
   }
 
   while (!stack.isEmpty()) {
     const rest = digits[stack.pop()];
-    console.log("down rest (binary) => ", rest);
+    console.log(`down rest (${base}) => `, rest);
     converted.push(rest);
   }
 
